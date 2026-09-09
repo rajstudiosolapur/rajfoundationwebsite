@@ -373,6 +373,12 @@ members = [
         "phone": "Phone Number",
         "photo": "artist7.jpeg",
     },
+    {
+        "name": "Rupali Mahamuni",
+        "role": "Vice President of Orchestra Dhanashree",
+        "phone": "Phone Number",
+        "photo": "artist7.jpeg",
+    },
 ]
 
 # =========================================================
