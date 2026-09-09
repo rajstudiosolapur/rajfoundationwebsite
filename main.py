@@ -1,6 +1,4 @@
 import streamlit as st
-from pathlib import Path
-import base64
 
 # =========================================================
 # RAJ STUDIOS SOLAPUR — ORCHESTRA WEBSITE
@@ -13,25 +11,34 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-BASE_DIR = Path(__file__).parent
-ASSETS = BASE_DIR / "assets"
-MEMBERS_DIR = ASSETS / "members"
-LOGO = "https://raw.githubusercontent.com/rajstudiosolapur/rajfoundationwebsite/main/logo.png"
+# =========================================================
+# GITHUB ASSETS
+# =========================================================
+
+GITHUB_RAW = (
+    "https://raw.githubusercontent.com/"
+    "rajstudiosolapur/rajfoundationwebsite/main/"
+)
+
+LOGO_URL = GITHUB_RAW + "logo.png"
 
 
 # =========================================================
 # CUSTOM CSS
 # =========================================================
 
-st.markdown("""
+st.markdown(
+    """
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url(
+'https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700'
+'&family=Poppins:wght@300;400;500;600;700&display=swap'
+);
 
 :root {
     --bg: #080611;
     --panel: #121021;
-    --panel2: #1b1430;
     --gold: #f7c65b;
     --pink: #ff4fa3;
     --purple: #8f5cff;
@@ -40,7 +47,9 @@ st.markdown("""
     --muted: #b9b2c9;
 }
 
-html, body, [class*="css"] {
+html,
+body,
+[class*="css"] {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -93,8 +102,8 @@ html, body, [class*="css"] {
     background:
         linear-gradient(
             115deg,
-            rgba(8,6,17,.95),
-            rgba(18,12,39,.82)
+            rgba(8,6,17,.96),
+            rgba(18,12,39,.88)
         ),
         radial-gradient(
             circle at 80% 20%,
@@ -155,9 +164,29 @@ html, body, [class*="css"] {
 .hero-content {
     position: relative;
     z-index: 2;
-
     max-width: 760px;
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-wrap {
+    margin-bottom: 15px;
+}
+
+.logo-wrap img {
+    max-height: 105px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
 
 .eyebrow {
     color: var(--gold);
@@ -186,9 +215,9 @@ html, body, [class*="css"] {
     background:
         linear-gradient(
             90deg,
-            #fff,
+            #ffffff,
             var(--gold),
-            #fff
+            #ffffff
         );
 
     -webkit-background-clip: text;
@@ -210,22 +239,6 @@ html, body, [class*="css"] {
 
 
 /* =========================================================
-   LOGO
-========================================================= */
-
-.logo-wrap {
-    margin-bottom: 8px;
-}
-
-.logo-wrap img {
-
-    max-height: 90px;
-
-    width: auto;
-}
-
-
-/* =========================================================
    SECTION TITLES
 ========================================================= */
 
@@ -240,7 +253,7 @@ html, body, [class*="css"] {
     margin:
         45px 0 8px;
 
-    color: #fff;
+    color: #ffffff;
 }
 
 .section-subtitle {
@@ -265,13 +278,17 @@ html, body, [class*="css"] {
     border:
         1px solid rgba(255,255,255,.07);
 
-    border-radius: 20px;
+    border-radius:
+        20px;
 
-    padding: 24px;
+    padding:
+        24px;
 
-    text-align: center;
+    text-align:
+        center;
 
-    height: 100%;
+    height:
+        100%;
 
     transition:
         .3s ease;
@@ -280,10 +297,13 @@ html, body, [class*="css"] {
 .feature:hover {
 
     transform:
-        translateY(-5px);
+        translateY(-6px);
 
     border-color:
-        rgba(78,220,255,.35);
+        rgba(78,220,255,.40);
+
+    box-shadow:
+        0 15px 40px rgba(78,220,255,.08);
 }
 
 .feature-icon {
@@ -375,6 +395,9 @@ html, body, [class*="css"] {
     object-fit:
         cover;
 
+    object-position:
+        center;
+
     border-radius:
         16px;
 
@@ -394,7 +417,7 @@ html, body, [class*="css"] {
         15px 5px 4px;
 
     color:
-        #fff;
+        #ffffff;
 }
 
 .member-role {
@@ -435,7 +458,7 @@ html, body, [class*="css"] {
         50px;
 
     padding:
-        35px 25px;
+        40px 25px;
 
     text-align:
         center;
@@ -452,6 +475,9 @@ html, body, [class*="css"] {
 
     border:
         1px solid rgba(247,198,91,.22);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.20);
 }
 
 .contact h2 {
@@ -461,6 +487,9 @@ html, body, [class*="css"] {
 
     margin-bottom:
         8px;
+
+    font-size:
+        2rem;
 }
 
 .phone {
@@ -479,26 +508,6 @@ html, body, [class*="css"] {
 
     margin:
         8px 0;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.footer {
-
-    text-align:
-        center;
-
-    color:
-        #81798e;
-
-    font-size:
-        .78rem;
-
-    padding:
-        28px 0 8px;
 }
 
 
@@ -525,32 +534,91 @@ html, body, [class*="css"] {
 
 
 /* =========================================================
-   STREAMLIT UI CLEANUP
+   FOOTER
+========================================================= */
+
+.footer {
+
+    text-align:
+        center;
+
+    color:
+        #81798e;
+
+    font-size:
+        .78rem;
+
+    padding:
+        28px 0 8px;
+}
+
+
+/* =========================================================
+   STREAMLIT CLEANUP
 ========================================================= */
 
 [data-testid="stHeader"] {
-    background:
-        transparent;
+    background: transparent;
 }
 
 [data-testid="stToolbar"] {
-    display:
-        none;
+    display: none;
 }
 
 [data-testid="stDecoration"] {
-    display:
-        none;
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 35px 24px;
+        min-height: 420px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: .95rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .member-photo {
+        height: 300px;
+    }
+
 }
 
 </style>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 
 # =========================================================
 # MEMBER DATA
 # =========================================================
-# Replace these with your actual artists.
+#
+# IMPORTANT:
+# Change the names, designations and phone numbers below.
+#
+# Photo filenames must match the files in your GitHub
+# repository's "members" folder.
+#
+# Example:
+# members/member1.jpg
+# members/member2.jpg
+# =========================================================
 
 members = [
 
@@ -595,29 +663,8 @@ members = [
         "phone": "Phone Number",
         "photo": "member6.jpg",
     },
+
 ]
-
-
-# =========================================================
-# LOAD LOGO
-# =========================================================
-
-logo_html = ""
-
-if LOGO.exists():
-
-    encoded = base64.b64encode(
-        LOGO.read_bytes()
-    ).decode()
-
-    logo_html = f"""
-    <div class="logo-wrap">
-        <img
-            src="data:image/png;base64,{encoded}"
-            alt="Raj Studios Solapur Logo"
-        >
-    </div>
-    """
 
 
 # =========================================================
@@ -630,7 +677,14 @@ st.markdown(
 
         <div class="hero-content">
 
-            {logo_html}
+            <div class="logo-wrap">
+
+                <img
+                    src="{LOGO_URL}"
+                    alt="Raj Studios Solapur Logo"
+                >
+
+            </div>
 
             <div class="eyebrow">
                 Solapur • Maharashtra
@@ -660,7 +714,7 @@ st.markdown(
 
     </section>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 
@@ -674,7 +728,7 @@ st.markdown(
         The Sound of Raj Studios
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 st.markdown(
@@ -686,34 +740,38 @@ st.markdown(
 
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
+
+# =========================================================
+# FEATURES
+# =========================================================
 
 features = [
 
     (
         "🎤",
         "Live Singing",
-        "Powerful vocals and engaging performances for every audience."
+        "Powerful vocals and engaging performances for every audience.",
     ),
 
     (
         "🎹",
         "Live Orchestra",
-        "A talented team of singers and musicians working together."
+        "A talented team of singers and musicians working together.",
     ),
 
     (
         "🎶",
         "Musical Variety",
-        "Bollywood, Marathi, devotional, retro and popular melodies."
+        "Bollywood, Marathi, devotional, retro and popular melodies.",
     ),
 
     (
         "✨",
         "Stage Entertainment",
-        "Colourful, energetic performances designed for memorable events."
+        "Colourful and energetic performances for memorable events.",
     ),
 
 ]
@@ -745,7 +803,7 @@ for col, feature in zip(cols, features):
 
             </div>
             """,
-            unsafe_allow_html=True
+            unsafe_allow_html=True,
         )
 
 
@@ -755,7 +813,7 @@ for col, feature in zip(cols, features):
 
 st.markdown(
     '<div class="divider"></div>',
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 st.markdown(
@@ -764,7 +822,7 @@ st.markdown(
         Our Artists
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 st.markdown(
@@ -776,124 +834,70 @@ st.markdown(
 
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 
-# Display 3 cards per row
+# =========================================================
+# ARTIST CARDS
+# =========================================================
 
 for start in range(
     0,
     len(members),
-    3
+    3,
 ):
 
     row = members[
         start:start + 3
     ]
 
-    cols = st.columns(
-        len(row)
-    )
+    cols = st.columns(3)
 
     for col, member in zip(
         cols,
-        row
+        row,
     ):
 
         with col:
 
-            photo_path = (
-                MEMBERS_DIR /
-                member["photo"]
+            # GitHub image URL
+            photo_url = (
+                GITHUB_RAW
+                + "members/"
+                + member["photo"]
             )
-
-            # ---------------------------------
-            # Artist photo
-            # ---------------------------------
-
-            if photo_path.exists():
-
-                extension = (
-                    photo_path
-                    .suffix
-                    .lower()
-                    .replace(".", "")
-                )
-
-                if extension in [
-                    "jpg",
-                    "jpeg"
-                ]:
-                    mime = "jpeg"
-                else:
-                    mime = extension
-
-                encoded = base64.b64encode(
-                    photo_path.read_bytes()
-                ).decode()
-
-                image_html = f"""
-                <img
-                    class="member-photo"
-                    src="data:image/{mime};base64,{encoded}"
-                    alt="{member['name']}"
-                >
-                """
-
-            else:
-
-                image_html = """
-                <div
-                    class="member-photo"
-                    style="
-                        display:flex;
-                        align-items:center;
-                        justify-content:center;
-                        background:
-                            linear-gradient(
-                                135deg,
-                                #21163a,
-                                #0c0a15
-                            );
-                        font-size:4rem;
-                    "
-                >
-                    🎤
-                </div>
-                """
-
-
-            # ---------------------------------
-            # Card
-            # ---------------------------------
 
             st.markdown(
                 f"""
                 <div class="member-card">
 
-                    {image_html}
+                    <img
+                        class="member-photo"
+                        src="{photo_url}"
+                        alt="{member['name']}"
+                    >
 
                     <div class="member-name">
-                        {member["name"]}
+                        {member['name']}
                     </div>
 
                     <div class="member-role">
-                        {member["role"]}
+                        {member['role']}
                     </div>
 
                     <div class="member-phone">
-                        📞 {member["phone"]}
+                        📞 {member['phone']}
                     </div>
 
                 </div>
                 """,
-                unsafe_allow_html=True
+                unsafe_allow_html=True,
             )
 
 
 # =========================================================
-# CONTACT / BOOKING SECTION
+# CONTACT / BOOKING
 # =========================================================
 
 st.markdown(
@@ -912,11 +916,11 @@ st.markdown(
         </p>
 
         <div class="phone">
-            7507552822
+            📞 7507552822
         </div>
 
         <div class="phone">
-            9923181017
+            📞 9923181017
         </div>
 
         <p
@@ -930,7 +934,7 @@ st.markdown(
 
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
 
 
@@ -948,5 +952,5 @@ st.markdown(
 
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True,
 )
