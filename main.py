@@ -379,6 +379,12 @@ members = [
         "phone": "Phone Number",
         "photo": "artist8.jpeg",
     },
+     {
+        "name": "Vidyua Jathar",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist9.jpeg",
+    },
 ]
 
 # =========================================================
