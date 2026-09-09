@@ -385,6 +385,12 @@ members = [
         "phone": "Phone Number",
         "photo": "artist9.png",
     },
+     {
+        "name": "Bharat Bhushan Swami",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist10.png",
+    },
 ]
 
 # =========================================================
