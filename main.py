@@ -1,6 +1,7 @@
 import streamlit as st
 from html import escape
 from urllib.parse import quote
+from textwrap import dedent
 
 # =========================================================
 # RAJ STUDIOS SOLAPUR — ORCHESTRA WEBSITE
@@ -12,6 +13,15 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed",
 )
+
+
+# =========================================================
+# HTML RENDER HELPER
+# =========================================================
+
+def render_html(html: str, **_kwargs) -> None:
+    """Render HTML without displaying the HTML source on the page."""
+    st.markdown(dedent(html).strip(), unsafe_allow_html=True)
 
 # =========================================================
 # GITHUB ASSETS
@@ -29,7 +39,7 @@ LOGO_URL = GITHUB_RAW + "logo.png"
 # CUSTOM CSS
 # =========================================================
 
-st.markdown(
+render_html(
     """
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -237,6 +247,47 @@ st.markdown(
         display: block;
     }
 
+    .member-photo-wrap {
+        position: relative;
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+        border-radius: 16px;
+        background: rgba(255,255,255,.04);
+    }
+
+    .member-photo-wrap .member-photo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .photo-fallback {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: var(--muted);
+        font-size: 2.4rem;
+        background: linear-gradient(145deg, rgba(27,20,48,.96), rgba(13,11,24,.96));
+    }
+
+    .photo-fallback span {
+        margin-top: 8px;
+        font-size: .8rem;
+        letter-spacing: .5px;
+    }
+
+    .photo-missing .photo-fallback {
+        display: flex;
+    }
+
+    .member-photo-wrap:not(.photo-missing) .photo-fallback {
+        display: none;
+    }
+
     .member-name {
         font-family: 'Cinzel', serif;
         font-size: 1.2rem;
@@ -352,20 +403,6 @@ st.markdown(
 # MEMBER DATA
 # =========================================================
 
-# =========================
-# ARTISTS / MEMBERS
-# =========================
-
-st.markdown(
-    """
-    <div class="section-heading">
-        <h2>Meet Our Artists</h2>
-        <p>Meet the voices and musicians behind the Raj Studios Orchestra.</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
 members = [
     {
         "name": "Artist Name 1",
@@ -400,60 +437,16 @@ members = [
     {
         "name": "Artist Name 6",
         "role": "Musician",
-        "phone": "Phone Number",
         "photo": "artist6.jpg",
+        "phone": "Phone Number",
     },
 ]
-
-member_cols = st.columns(3)
-
-for i, member in enumerate(members):
-    with member_cols[i % 3]:
-
-        # GitHub raw image URL
-        photo_url = (
-            GITHUB_RAW
-            + "members/"
-            + quote(str(member["photo"]).lstrip("/"), safe="")
-        )
-
-        card_html = f"""
-        <div class="member-card">
-
-            <div class="member-image">
-                <img
-                    src="{escape(photo_url)}"
-                    alt="{escape(member['name'])}"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="member-info">
-
-                <div class="member-name">
-                    {escape(member["name"])}
-                </div>
-
-                <div class="member-role">
-                    {escape(member["role"])}
-                </div>
-
-                <div class="member-phone">
-                    📞 {escape(member["phone"])}
-                </div>
-
-            </div>
-
-        </div>
-        """
-
-        st.markdown(card_html, unsafe_allow_html=True)
 
 # =========================================================
 # HERO SECTION
 # =========================================================
 
-st.markdown(
+render_html(
     f"""
     <section class="hero">
         <div class="hero-content">
@@ -490,7 +483,7 @@ st.markdown(
 # ABOUT SECTION
 # =========================================================
 
-st.markdown(
+render_html(
     """
     <div class="section-title">
         The Sound of Raj Studios
@@ -537,7 +530,7 @@ for col, feature in zip(cols, features):
     icon, title, description = feature
 
     with col:
-        st.markdown(
+        render_html(
             f"""
             <div class="feature">
                 <div class="feature-icon">{escape(icon)}</div>
@@ -553,9 +546,9 @@ for col, feature in zip(cols, features):
 # ARTISTS SECTION
 # =========================================================
 
-st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+render_html('<div class="divider"></div>', unsafe_allow_html=True)
 
-st.markdown(
+render_html(
     """
     <div class="section-title">Our Artists</div>
     <div class="section-subtitle">
@@ -576,15 +569,14 @@ for start in range(0, len(members), 3):
 
     for col, member in zip(cols, row):
         with col:
-            # GitHub Raw URL — intentionally kept as a string.
-            # Do not call Path(...).exists() on this URL.
+            # GitHub Raw URL — keep this as a URL string.
             photo_url = (
                 GITHUB_RAW
                 + "members/"
                 + quote(str(member["photo"]).lstrip("/"), safe="")
             )
 
-            st.markdown(
+            render_html(
                 f"""
                 <div class="member-card">
                     <img
@@ -615,7 +607,7 @@ for start in range(0, len(members), 3):
 # CONTACT / BOOKING
 # =========================================================
 
-st.markdown(
+render_html(
     """
     <div class="contact">
         <h2>Book Raj Studios Orchestra</h2>
@@ -640,7 +632,7 @@ st.markdown(
 # FOOTER
 # =========================================================
 
-st.markdown(
+render_html(
     """
     <div class="footer">
         © 2026 Raj Studios Solapur
