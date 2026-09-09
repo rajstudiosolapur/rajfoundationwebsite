@@ -335,7 +335,7 @@ members = [
         "name": "Atul Swami",
         "role": "Founder & Managing Director of Raj Studio Solapur",
         "phone": "7507552822",
-        "photo": "artist1.jpg",
+        "photo": "atul.jpg",
     },
     {
         "name": "Dhanashri Sargule",
@@ -397,11 +397,53 @@ members = [
         "phone": "Phone Number",
         "photo": "artist11.png",
     },
+    {
+        "name": "Bhimashankar Bhalke",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist12.png",
+    },
      {
         "name": "Shabbir Bandi",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist12.jpeg",
+        "photo": "artist13.jpeg",
+    },
+    {
+        "name": "Suhas Sadafule",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist14.jpeg",
+    },
+    {
+        "name": "Rajgandharv Sadafule",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist14.jpeg",
+    },
+     {
+        "name": "Prashant Hatakar",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist15.jpeg",
+    },
+     {
+        "name": "Anita Iyyar",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist16.jpeg",
+    },
+     {
+        "name": "Megha Salunkhe",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist17.jpeg",
+    },
+     {
+        "name": "Sayali Sathe",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist18.jpeg",
     },
 ]
 
