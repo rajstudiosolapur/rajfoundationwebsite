@@ -359,7 +359,7 @@ members = [
         "name": "Rahul Koulgud",
         "role": "Secretary of Raj Studio",
         "phone": "Phone Number",
-        "photo": "artist5.jpg",
+        "photo": "artist5.png",
     },
     {
         "name": "Artist Name 6",
