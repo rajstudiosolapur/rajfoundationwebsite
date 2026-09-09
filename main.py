@@ -335,7 +335,7 @@ members = [
         "name": "Atul Swami",
         "role": "Founder & Managing Director of Raj Studio Solapur",
         "phone": "7507552822",
-        "photo": "artist1.png",
+        "photo": "artist1.jpg",
     },
     {
         "name": "Dhanashri Sargule",
