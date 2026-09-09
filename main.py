@@ -332,21 +332,21 @@ html, body, [class*="css"] {
 # =========================================================
 members = [
     {
-        "name": "Shri. Atul Swami",
-        "role": "Founder & Managing Director",
+        "name": "Atul Swami",
+        "role": "Founder & Managing Director of Raj Studio Solapur",
         "phone": "7507552822",
         "photo": "artist1.jpg",
     },
     {
-        "name": "Artist Name 2",
-        "role": "Singer / Performer",
-        "phone": "Phone Number",
+        "name": "Dhanashri Sargule",
+        "role": "President of Orchestra Dhanashri.",
+        "phone": "9923181017",
         "photo": "artist2.jpg",
     },
     {
-        "name": "Artist Name 3",
-        "role": "Keyboard Artist",
-        "phone": "Phone Number",
+        "name": "Vinayak Sargule",
+        "role": "Co-Founder of Raj Studio Solapur",
+        "phone": "9923181017",
         "photo": "artist3.jpg",
     },
     {
