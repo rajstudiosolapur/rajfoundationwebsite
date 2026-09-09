@@ -445,6 +445,24 @@ members = [
         "phone": "Phone Number",
         "photo": "sayali.jpeg",
     },
+    {
+        "name": "Nikhil Bhalerao",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "nikhil.jpeg",
+    },
+    {
+        "name": "Shashi Basudkar",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "shashi.jpeg",
+    },
+    {
+        "name": "Sakshi Devasthali",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "sakshi.jpeg",
+    },
 ]
 
 # =========================================================
