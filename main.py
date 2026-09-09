@@ -357,15 +357,21 @@ members = [
     },
     {
         "name": "Rahul Koulgud",
-        "role": "Secretary of Raj Studio",
+        "role": "Secretary of Raj Studio Solapur",
         "phone": "Phone Number",
         "photo": "artist5.png",
     },
     {
-        "name": "Artist Name 6",
-        "role": "Musician",
+        "name": "Ashok Birajdar",
+        "role": "Vice President of Raj Studio Solapur",
         "phone": "Phone Number",
         "photo": "artist6.jpg",
+    },
+    {
+        "name": "Bhagwat Jathar",
+        "role": "Vice President of Raj Studio Solapur",
+        "phone": "Phone Number",
+        "photo": "artist7.jpg",
     },
 ]
 
