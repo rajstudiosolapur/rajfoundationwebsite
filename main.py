@@ -425,19 +425,19 @@ members = [
         "name": "Prashant Hatakar",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "prashant.jpeg",
+        "photo": "prashant.png",
     },
      {
         "name": "Anita Iyyar",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "anita.jpeg",
+        "photo": "anita.png",
     },
      {
         "name": "Megha Salunkhe",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "megha.jpeg",
+        "photo": "megha.png",
     },
      {
         "name": "Sayali Sathe",
