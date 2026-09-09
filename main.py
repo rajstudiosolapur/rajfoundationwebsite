@@ -570,7 +570,7 @@ for start in range(0, len(members), 3):
 # =========================================================
 render_html("""
 <div class="contact">
-    <h2>Book Raj Studios Orchestra</h2>
+    <h2>Book Raj Studio Presents Orchestra Dhanashri</h2>
     <p style="color:#c8c1d6;">
         For programs, events, celebrations and live musical performances
     </p>
