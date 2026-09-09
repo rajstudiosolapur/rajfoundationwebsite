@@ -332,9 +332,9 @@ html, body, [class*="css"] {
 # =========================================================
 members = [
     {
-        "name": "Artist Name 1",
-        "role": "Lead Vocalist",
-        "phone": "Phone Number",
+        "name": "Shri. Atul Swami",
+        "role": "Founder & Managing Director",
+        "phone": "7507552822",
         "photo": "artist1.jpg",
     },
     {
@@ -352,7 +352,7 @@ members = [
     {
         "name": "Bhakti Mahamuni",
         "role": "Singer",
-        "phone": "7666129377",
+        "phone": "7507552822",
         "photo": "artist4.jpg",
     },
     {
