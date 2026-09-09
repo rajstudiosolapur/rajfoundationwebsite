@@ -449,7 +449,7 @@ members = [
         "name": "Nikhil Bhalerao",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "nikhil.jpeg",
+        "photo": "nikhil.png",
     },
     {
         "name": "Shashi Basudkar",
