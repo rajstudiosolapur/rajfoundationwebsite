@@ -391,6 +391,18 @@ members = [
         "phone": "Phone Number",
         "photo": "artist10.png",
     },
+    {
+        "name": "Sunny Bhandare",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist11.png",
+    },
+     {
+        "name": "Shabbir Bandi",
+        "role": "Singer",
+        "phone": "Phone Number",
+        "photo": "artist12.jpeg",
+    },
 ]
 
 # =========================================================
