@@ -383,7 +383,7 @@ members = [
         "name": "Vidya Jathar",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist9.jpeg",
+        "photo": "artist9.png",
     },
 ]
 
