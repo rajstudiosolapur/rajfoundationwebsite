@@ -365,7 +365,7 @@ members = [
         "name": "Ashok Birajdar",
         "role": "Vice President of Raj Studio Solapur",
         "phone": "Phone Number",
-        "photo": "artist6.jpg",
+        "photo": "artist6.png",
     },
     {
         "name": "Bhagwat Jathar",
