@@ -380,7 +380,7 @@ members = [
         "photo": "rupali.jpeg",
     },
      {
-        "name": "Vidya Jathar",
+        "name": "Vidhya Jathar",
         "role": "Singer",
         "phone": "Phone Number",
         "photo": "vidhya.png",
@@ -389,7 +389,7 @@ members = [
         "name": "Bharat Bhushan Swami",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "bhushan.png",
+        "photo": "bharat.png",
     },
     {
         "name": "Sunny Bhandare",
@@ -407,43 +407,43 @@ members = [
         "name": "Shabbir Bandi",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist13.jpeg",
+        "photo": "shabbir.jpeg",
     },
     {
         "name": "Suhas Sadafule",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist14.jpeg",
+        "photo": "suhas.jpeg",
     },
     {
         "name": "Rajgandharv Sadafule",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist14.jpeg",
+        "photo": "rajgandharv.jpeg",
     },
      {
         "name": "Prashant Hatakar",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist15.jpeg",
+        "photo": "prashant.jpeg",
     },
      {
         "name": "Anita Iyyar",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist16.jpeg",
+        "photo": "anita.jpeg",
     },
      {
         "name": "Megha Salunkhe",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist17.jpeg",
+        "photo": "megha.jpeg",
     },
      {
         "name": "Sayali Sathe",
         "role": "Singer",
         "phone": "Phone Number",
-        "photo": "artist18.jpeg",
+        "photo": "sayali.jpeg",
     },
 ]
 
