@@ -380,7 +380,7 @@ members = [
         "photo": "artist8.jpeg",
     },
      {
-        "name": "Vidyua Jathar",
+        "name": "Vidya Jathar",
         "role": "Singer",
         "phone": "Phone Number",
         "photo": "artist9.jpeg",
