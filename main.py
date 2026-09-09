@@ -16,7 +16,7 @@ st.set_page_config(
 BASE_DIR = Path(__file__).parent
 ASSETS = BASE_DIR / "assets"
 MEMBERS_DIR = ASSETS / "members"
-LOGO = ASSETS / "logo.png"
+LOGO = "https://raw.githubusercontent.com/rajstudiosolapur/rajfoundationwebsite/main/logo.png"
 
 
 # =========================================================
