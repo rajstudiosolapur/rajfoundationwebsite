@@ -369,7 +369,7 @@ members = [
     },
     {
         "name": "Bhagwat Jathar",
-        "role": "Vice President of Raj Studio Solapur",
+        "role": "Treasurer of Raj Studio Solapur",
         "phone": "Phone Number",
         "photo": "artist7.jpg",
     },
