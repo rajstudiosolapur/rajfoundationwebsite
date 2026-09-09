@@ -108,21 +108,29 @@ html, body, [class*="css"] {
     to   { transform: scale(1.15) rotate(35deg); opacity: .30; }
 }
 
+/* HERO CONTENT - CENTERED */
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 760px;
+    margin: 0 auto;          /* centers the content */
+    text-align: center;      /* centers text + logo */
 }
 
-/* LOGO */
+/* LOGO - CIRCULAR */
 .logo-wrap {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
+
 .logo-wrap img {
-    max-height: 105px;
-    width: auto;
-    max-width: 300px;
-    object-fit: contain;
+    width: 130px;            /* fixed size for perfect circle */
+    height: 130px;
+    object-fit: cover;       /* important for circular crop */
+    border-radius: 50%;      /* makes it circular */
+    border: 3px solid rgba(247, 198, 91, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* HERO TEXT */
