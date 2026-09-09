@@ -356,9 +356,8 @@ members = [
         "photo": "artist4.jpg",
     },
     {
-        "name": "Artist Name 5",
-        "role": "Singer / Performer",
-        "phone": "Phone Number",
+        "name": "Rahul Koulgud",
+        "role": "Secretary of Raj Studio",
         "photo": "artist5.jpg",
     },
     {
