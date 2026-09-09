@@ -352,45 +352,102 @@ st.markdown(
 # MEMBER DATA
 # =========================================================
 
+# =========================
+# ARTISTS / MEMBERS
+# =========================
+
+st.markdown(
+    """
+    <div class="section-heading">
+        <h2>Meet Our Artists</h2>
+        <p>Meet the voices and musicians behind the Raj Studios Orchestra.</p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
 members = [
     {
         "name": "Artist Name 1",
         "role": "Lead Vocalist",
         "phone": "Phone Number",
-        "photo": "member1.jpg",
+        "photo": "artist1.jpg",
     },
     {
         "name": "Artist Name 2",
         "role": "Singer / Performer",
         "phone": "Phone Number",
-        "photo": "member2.jpg",
+        "photo": "artist2.jpg",
     },
     {
         "name": "Artist Name 3",
         "role": "Keyboard Artist",
         "phone": "Phone Number",
-        "photo": "member3.jpg",
+        "photo": "artist3.jpg",
     },
     {
         "name": "Artist Name 4",
         "role": "Musician",
         "phone": "Phone Number",
-        "photo": "member4.jpg",
+        "photo": "artist4.jpg",
     },
     {
         "name": "Artist Name 5",
-        "role": "Singer / Musician",
+        "role": "Singer / Performer",
         "phone": "Phone Number",
-        "photo": "member5.jpg",
+        "photo": "artist5.jpg",
     },
     {
         "name": "Artist Name 6",
-        "role": "Drummer / Percussionist",
+        "role": "Musician",
         "phone": "Phone Number",
-        "photo": "member6.jpg",
+        "photo": "artist6.jpg",
     },
 ]
 
+member_cols = st.columns(3)
+
+for i, member in enumerate(members):
+    with member_cols[i % 3]:
+
+        # GitHub raw image URL
+        photo_url = (
+            GITHUB_RAW
+            + "members/"
+            + quote(str(member["photo"]).lstrip("/"), safe="")
+        )
+
+        card_html = f"""
+        <div class="member-card">
+
+            <div class="member-image">
+                <img
+                    src="{escape(photo_url)}"
+                    alt="{escape(member['name'])}"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="member-info">
+
+                <div class="member-name">
+                    {escape(member["name"])}
+                </div>
+
+                <div class="member-role">
+                    {escape(member["role"])}
+                </div>
+
+                <div class="member-phone">
+                    📞 {escape(member["phone"])}
+                </div>
+
+            </div>
+
+        </div>
+        """
+
+        st.markdown(card_html, unsafe_allow_html=True)
 
 # =========================================================
 # HERO SECTION
