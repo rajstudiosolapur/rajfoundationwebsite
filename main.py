@@ -371,7 +371,7 @@ members = [
         "name": "Bhagwat Jathar",
         "role": "Treasurer of Raj Studio Solapur",
         "phone": "Phone Number",
-        "photo": "artist7.jpg",
+        "photo": "artist7.jpeg",
     },
 ]
 
