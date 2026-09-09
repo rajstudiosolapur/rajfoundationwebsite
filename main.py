@@ -423,9 +423,9 @@ members = [
         "photo": "artist3.jpg",
     },
     {
-        "name": "Artist Name 4",
-        "role": "Musician",
-        "phone": "Phone Number",
+        "name": "Bhakti Mahamuni",
+        "role": "Singer",
+        "phone": "7666129377",
         "photo": "artist4.jpg",
     },
     {
